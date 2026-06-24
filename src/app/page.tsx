@@ -28,6 +28,16 @@ export default function Calculator() {
   const handleClear = () => {
     setValue("0")
   }
+  const handleCalculate = () => {
+    const try {
+      const result = new Function(`return ${value.replace(/[^0-9+\-\*/.]/g, "")}`)();
+
+      setValue(String(result));
+    } catch (error) {
+
+    };
+  };
+
 
   return (
     <div >
@@ -77,7 +87,7 @@ export default function Calculator() {
 
                 <button onClick={() => handlekey(".")} className='bg-black/90 text-slate-100 hover:bg-gray-950/90 hover:text-gray-400 p-2 rounded-lg '>.</button>
 
-                <button className='bg-green-600/90 text-slate-100 p-2 rounded-lg '>=</button>
+                <button onClick={handleCalculate} className='bg-green-600/90 hover:bg-green-800/90 hover:text-green-300 text-green-100 p-2 rounded-lg '>=</button>
               </div>
             </CardContent>
           </Card>
