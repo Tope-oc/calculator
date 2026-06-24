@@ -34,7 +34,7 @@ export default function Calculator() {
 
       setValue(String(result));
     } catch (error) {
-
+      setValue(String(Error))
     };
   };
 
