@@ -29,7 +29,7 @@ export default function Calculator() {
     setValue("0")
   }
   const handleCalculate = () => {
-    const try {
+    try {
       const result = new Function(`return ${value.replace(/[^0-9+\-\*/.]/g, "")}`)();
 
       setValue(String(result));
