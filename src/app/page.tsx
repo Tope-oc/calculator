@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/card"
 
 
-export default function calculator() {
+export default function Calculator() {
 
   const [value, setValue] = useState("0");
 
