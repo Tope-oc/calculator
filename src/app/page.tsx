@@ -17,7 +17,7 @@ export default function Calculator() {
 
   const [value, setValue] = useState("0");
 
-  const handlekey = (key) => {
+  const handlekey = (key: string) => {
     if (value === "0") {
       setValue(key);
     } else {
